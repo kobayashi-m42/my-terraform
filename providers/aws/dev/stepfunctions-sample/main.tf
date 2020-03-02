@@ -14,3 +14,9 @@ module "ecs" {
   cloudwatch_logname = local.cloudwatch_logname
   ecs_sg_name        = local.ecs_sg_name
 }
+
+module "iam" {
+  source = "../../../../modules/aws/stepfunctions-sample/iam"
+
+  role = local.role
+}
